@@ -1,0 +1,11 @@
+<h2><%= feed.escape('title') %></h2>
+
+<button id="refresh">Refresh</button>
+
+<ul id='entries'>
+  <% feed.entries().each(function(entry) { %>
+    <li>
+      <%= entry.escape('title') %> @ <%= entry.escape('published_at') %>
+    </li>
+  <% }); %>
+</ul>
